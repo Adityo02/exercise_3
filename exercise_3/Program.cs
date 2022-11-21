@@ -15,28 +15,28 @@ namespace exercise_3
     }
     class CircularList
     {
-        Node LAST;
+        Node START;
 
         public CircularList()
         {
-            LAST = null;
+            START = null;
         }
         public bool Search(int rollNo, ref Node previous, ref Node current)/*Searches for the specified node*/
         {
-            for (previous = current = LAST.next; current != LAST; previous =
+            for (previous = current = START.next; current != START; previous =
                 current, current = current.next)
             {
                 if (rollNo == current.rollNumber)
                     return (true);/*returns true if the node is found*/
             }
-            if (rollNo == LAST.rollNumber)/*if the node is present at the end*/
+            if (rollNo == START.rollNumber)/*if the node is present at the end*/
                 return true;
             else
                 return (false);/*returns false if the node is found*/
         }
         public bool listEmpty()
         {
-            if (LAST == null)
+            if (START == null)
                 return true;
             else
                 return false;
@@ -51,13 +51,13 @@ namespace exercise_3
             {
                 Console.WriteLine("\nRecords in The List are:\n");
                 Node currentNode;
-                currentNode = LAST.next;
-                while (currentNode != LAST)
+                currentNode = START.next;
+                while (currentNode != START)
                 {
                     Console.Write(currentNode.rollNumber + "    " + currentNode.name + "\n");
                     currentNode = currentNode.next;
                 }
-                Console.Write(LAST.rollNumber + "   " + LAST.name + "\n");
+                Console.Write(START.rollNumber + "   " + START.name + "\n");
             }
         }
         public void firstNode()
@@ -65,7 +65,7 @@ namespace exercise_3
             if (listEmpty())
                 Console.WriteLine("\nList is Empty");
             else
-                Console.WriteLine("\nThe first record in the list is:\n\n" + LAST.next.rollNumber + "   " + LAST.next.name);
+                Console.WriteLine("\nThe first record in the list is:\n\n" + START.next.rollNumber + "   " + START.next.name);
         }
     }
     internal class Program
