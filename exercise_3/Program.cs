@@ -23,7 +23,7 @@ namespace exercise_3
         }
         public bool Search(int rollNo, ref Node previous, ref Node current)/*Searches for the specified node*/
         {
-            for (previous = current =LAST.next; current != LAST; previous =
+            for (previous = current = LAST.next; current != LAST; previous =
                 current, current = current.next)
             {
                 if (rollNo == current.rollNumber)
@@ -37,9 +37,9 @@ namespace exercise_3
         public bool listEmpty()
         {
             if (LAST == null)
-                return true ;
+                return true;
             else
-                return false ;
+                return false;
         }
 
 
@@ -72,6 +72,21 @@ namespace exercise_3
     {
         static void Main(string[] args)
         {
+            CircularList obj = new CircularList();
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("\nMENU");
+                    Console.WriteLine("1. View all the records in the list");
+                    Console.WriteLine("2. Search for a record in the list");
+                    Console.WriteLine("3. Display the first record in the list");
+                    Console.WriteLine("4. EXIT");
+                    Console.Write("\nEnter your choice (1-4) : ");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                    
+                }
+            }
         }
     }
 }
