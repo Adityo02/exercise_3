@@ -63,6 +63,17 @@ namespace exercise_3
             newnode.next = current;
             previous.next = newnode;
         }
+        public bool delNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if (current == START)
+                START = START.next;
+            return true;
+        }
         public bool Search(int rollNo, ref Node previous, ref Node current)/*Searches for the specified node*/
         {
             for (previous = current = START.next; current != START; previous =
