@@ -110,7 +110,7 @@ namespace exercise_3
             else
                 return false;
         }
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
