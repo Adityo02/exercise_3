@@ -61,7 +61,10 @@ namespace exercise_3
                 Console.Write(LAST.rollNumber + "   " + LAST.name + "\n");
             }
         }
+        public void firstNode()
+        {
 
+        }
     }
     internal class Program
     {
