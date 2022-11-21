@@ -117,8 +117,18 @@ namespace exercise_3
                                 obj.firstNode();
                             }
                             break;
+                        case '4':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("Invalid Option");
+                                break;
+                            }
                     }
-                    
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.ToString());
                 }
             }
         }
