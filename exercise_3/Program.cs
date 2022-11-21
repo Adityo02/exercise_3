@@ -54,8 +54,7 @@ namespace exercise_3
                 currentNode = LAST.next;
                 while (currentNode != LAST)
                 {
-                    Console.Write(currentNode.rollNumber + "    " +
-                        currentNode.name + "\n");
+                    Console.Write(currentNode.rollNumber + "    " + currentNode.name + "\n");
                     currentNode = currentNode.next;
                 }
                 Console.Write(LAST.rollNumber + "   " + LAST.name + "\n");
@@ -63,7 +62,10 @@ namespace exercise_3
         }
         public void firstNode()
         {
-
+            if (listEmpty())
+                Console.WriteLine("\nList is Empty");
+            else
+                Console.WriteLine("\nThe first record in the list is:\n\n" + LAST.next.rollNumber + "   " + LAST.next.name);
         }
     }
     internal class Program
