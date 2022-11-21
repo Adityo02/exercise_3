@@ -135,7 +135,7 @@ namespace exercise_3
                     {
                         case '1':
                             {
-                                obj.Traverse();
+                                obj.addNote();
                             }
                             break;
                         case '2':
