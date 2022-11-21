@@ -110,17 +110,6 @@ namespace exercise_3
             else
                 return false;
         }
-
-
-        
-        public void firstNode()
-        {
-            if (listEmpty())
-                Console.WriteLine("\nList is Empty");
-            else
-                Console.WriteLine("\nThe first record in the list is:\n\n" + START.next.rollNumber + "   " + START.next.name);
-        }
-    }
     internal class Program
     {
         static void Main(string[] args)
