@@ -41,6 +41,12 @@ namespace exercise_3
             else
                 return false ;
         }
+
+
+        public void Traverse()/*Traverses all the nodes of the list*/
+        {
+
+        }
     }
     internal class Program
     {
