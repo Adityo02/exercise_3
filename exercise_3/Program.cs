@@ -11,6 +11,7 @@ namespace exercise_3
         /*create Nodes for the circuar nexted list*/
         public int rollNumber;
         public string name;
+        public Node next;
     }
     internal class Program
     {
