@@ -88,6 +88,21 @@ namespace exercise_3
             else
                 return true;
         }
+        public void Traverse()/*Traverses all the nodes of the list*/
+        {
+            if (listEmpty())
+                Console.WriteLine("\nThe Records in The List are: ");
+            else
+            {
+                Console.WriteLine("\nThe Records in The List are: ");
+                Node currentNode;
+                for (currentNode = START; currentNode != null;
+                    currentNode = currentNode.next)
+                    Console.Write(currentNode.rollNumber + " "
+                        + currentNode.name + "\n");
+                Console.WriteLine();
+            }
+        }
         public bool listEmpty()
         {
             if (START == null)
@@ -97,23 +112,7 @@ namespace exercise_3
         }
 
 
-        public void Traverse()/*Traverses all the nodes of the list*/
-        {
-            if (listEmpty())
-                Console.WriteLine("\nList is Empty");
-            else
-            {
-                Console.WriteLine("\nRecords in The List are:\n");
-                Node currentNode;
-                currentNode = START.next;
-                while (currentNode != START)
-                {
-                    Console.Write(currentNode.rollNumber + "    " + currentNode.name + "\n");
-                    currentNode = currentNode.next;
-                }
-                Console.Write(START.rollNumber + "   " + START.name + "\n");
-            }
-        }
+        
         public void firstNode()
         {
             if (listEmpty())
