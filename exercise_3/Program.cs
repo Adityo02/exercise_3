@@ -13,9 +13,21 @@ namespace exercise_3
         public string name;
         public Node next;
     }
-    class CirculaList
+    class CircularList
     {
-        Node Last;
+        Node LAST;
+
+        public CircularList()
+        {
+
+        }
+        public bool Search(int rollNo, ref Node previous, ref Node current)
+        /*Searches for the specified node*/
+        {
+            for (previous = current =LAST.next; current != LAST; previous =
+                current, current = current.next)
+
+        }
     }
     internal class Program
     {
