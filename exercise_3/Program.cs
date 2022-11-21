@@ -91,6 +91,27 @@ namespace exercise_3
                                 obj.Traverse();
                             }
                             break;
+                        case '2':
+                            {
+                                if (obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Node prev, curr;
+                                prev = curr = null;
+                                Console.Write("Enter the roll number of The Student whose record is to be deleted: ");
+                                int num = Convert.ToInt32(Console.ReadLine());
+                                if (obj.Search(num, ref prev, ref curr) == false)
+                                    Console.WriteLine("\nRecord Not Found.");
+                                else
+                                {
+                                    Console.WriteLine("Record found");
+                                    Console.WriteLine("\nRoll Number: " + curr.rollNumber);
+                                    Console.WriteLine("\nName: " + curr.name);
+                                }
+                            }
+                            break;
                     }
                     
                 }
