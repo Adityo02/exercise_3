@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace exercise_3
 {
+    //each node consist of the information partand link to the next node
     class Node
     {
-        /*create Nodes for the circuar nexted list*/
         public int rollNumber;
         public string name;
         public Node next;
     }
-    class CircularList
+    class List
     {
         Node START;
 
-        public CircularList()
+        public List()
         {
             START = null;
         }
@@ -118,7 +118,7 @@ namespace exercise_3
     {
         static void Main(string[] args)
         {
-            CircularList obj = new CircularList();
+            List obj = new List();
             while (true)
             {
                 try
@@ -138,6 +138,7 @@ namespace exercise_3
                                 obj.addNote();
                             }
                             break;
+
                         case '2':
                             {
                                 if (obj.listEmpty())
@@ -193,6 +194,10 @@ namespace exercise_3
                                 break;
                             }
                     }
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("\nCheck for the value entered");
                 }
             }
         }
