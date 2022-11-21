@@ -76,16 +76,17 @@ namespace exercise_3
         }
         public bool Search(int rollNo, ref Node previous, ref Node current)/*Searches for the specified node*/
         {
-            for (previous = current = START.next; current != START; previous =
-                current, current = current.next)
+            previous = START;
+            current = START;
+            while ((current != null) && (rollNo != current.rollNumber))
             {
-                if (rollNo == current.rollNumber)
-                    return (true);/*returns true if the node is found*/
+                previous = current;
+                current = current.next;
             }
-            if (rollNo == START.rollNumber)/*if the node is present at the end*/
-                return true;
+            if (current == null)
+                return false;
             else
-                return (false);/*returns false if the node is found*/
+                return true;
         }
         public bool listEmpty()
         {
