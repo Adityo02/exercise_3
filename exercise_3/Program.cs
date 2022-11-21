@@ -63,6 +63,7 @@ namespace exercise_3
             newnode.next = current;
             previous.next = newnode;
         }
+
         public bool delNode(int rollNo)
         {
             Node previous, current;
@@ -74,6 +75,7 @@ namespace exercise_3
                 START = START.next;
             return true;
         }
+
         public bool Search(int rollNo, ref Node previous, ref Node current)/*Searches for the specified node*/
         {
             previous = START;
@@ -103,6 +105,7 @@ namespace exercise_3
                 Console.WriteLine();
             }
         }
+        
         public bool listEmpty()
         {
             if (START == null)
@@ -110,6 +113,7 @@ namespace exercise_3
             else
                 return false;
         }
+    }
     class Program
     {
         static void Main(string[] args)
@@ -156,7 +160,7 @@ namespace exercise_3
                             break;
                         case '3':
                             {
-                                obj.firstNode();
+                                obj.Traverse();
                             }
                             break;
                         case '4':
