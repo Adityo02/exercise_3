@@ -163,12 +163,27 @@ namespace exercise_3
                             }
                             break;
                         case '4':
-                            return;
-                        default:
                             {
-                                Console.WriteLine("Invalid Option");
-                                break;
+                                if(obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nList is Empty");
+                                    break;
+                                }
+                                Node previous, current;
+                                previous = current = null;
+                                Console.Write("\nEnter the roll number of the " +
+                                    "Student whole record is to be Searched: ");
+                                int num = Convert.ToInt32(Console.ReadLine());
+                                if (obj.Search(num, ref previous, ref current) == false)
+                                    Console.WriteLine("\nRecord Not Found");
+                                else
+                                {
+                                    Console.WriteLine("\nRecord Not Found");
+                                    Console.WriteLine("\nRoll Number: " + current.rollNumber);
+                                    Console.WriteLine("\nName: " + current.name);
+                                }
                             }
+                            break;
                     }
                 }
                 catch (Exception e)
