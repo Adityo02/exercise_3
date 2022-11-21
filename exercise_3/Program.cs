@@ -34,6 +34,10 @@ namespace exercise_3
             else
                 return (false);/*returns false if the node is found*/
         }
+        public bool listEmpty()
+        {
+
+        }
     }
     internal class Program
     {
