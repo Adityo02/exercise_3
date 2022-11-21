@@ -15,7 +15,7 @@ namespace exercise_3
     }
     class CirculaList
     {
-
+        Node Last;
     }
     internal class Program
     {
