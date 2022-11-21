@@ -140,23 +140,21 @@ namespace exercise_3
                             break;
                         case '2':
                             {
-                                if (obj.listEmpty() == true)
+                                if (obj.listEmpty())
                                 {
                                     Console.WriteLine("\nList is empty");
                                     break;
                                 }
-                                Node prev, curr;
-                                prev = curr = null;
-                                Console.Write("Enter the roll number of The Student whose record is to be deleted: ");
-                                int num = Convert.ToInt32(Console.ReadLine());
-                                if (obj.Search(num, ref prev, ref curr) == false)
+                                Console.WriteLine("Enter the roll number of" +
+                                    " The Student whose record is to be deleted: ");
+                                int rollNo = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.delNode(rollNo) == false)
                                     Console.WriteLine("\nRecord Not Found.");
                                 else
-                                {
-                                    Console.WriteLine("Record found");
-                                    Console.WriteLine("\nRoll Number: " + curr.rollNumber);
-                                    Console.WriteLine("\nName: " + curr.name);
-                                }
+                                    Console.WriteLine("Record with roll number" +
+
+                                        +rollNo + "Deleted");
                             }
                             break;
                         case '3':
